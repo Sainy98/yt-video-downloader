@@ -1,0 +1,19 @@
+{%extends 'index.html'%}
+{%block content%}
+<h3>{{TITLE}}</h3>
+
+<form action="/download" method="POST">
+    <input type="url" name="url" class="url" placeholder="Enter Your Link">
+    <input id="btn" type="submit" class="submit" value="Go" onclick="downloading()">
+</form>
+
+
+<div class="uses">
+    <h2>HOW TO USE?</h2>
+    <h4>1. Copy The Youtube link from the Youtube </h4>
+    <h4>2. paste the link </h4>
+    <h4>3. click on submit button </h4>
+    <h4>3. select you video resolution</h4>
+    <h4>4. click the download button</h4>
+</div>
+{%endblock content%}

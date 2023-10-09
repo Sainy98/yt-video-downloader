@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, send_file, session, url_for, redirect
 from pytube import YouTube
 from io import BytesIO
+import os
 
 app = Flask(__name__, template_folder="Template")
 app.config['SECRET_KEY'] = "sainy"
 
+port = int(os.environ.get("PORT", 5000))
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -43,4 +45,5 @@ def downloaded():
     return send_file(buffer, as_attachment=True, download_name=f"{TITLE} video.mp4", mimetype="video/mp4")
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=port, debug=True)

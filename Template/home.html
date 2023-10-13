@@ -6,13 +6,21 @@
     <input type="url" name="url" class="url" placeholder="Enter Your Link">
     <input id="btn" type="submit" class="submit" value="Go" onclick="downloading()">
 </form>
-
+<div id="walk">
+    <img src="/static/css/1474.gif" alt="" srcset=""><br>
+    <span>video is preparing........</span>
+</div>
+<script>
+    function downloading() {
+        document.getElementById("walk").style.display = 'block';
+    }
+</script>
 
 <div class="uses">
     <h2>HOW TO USE?</h2>
     <h4>1. Copy The Youtube link from the Youtube </h4>
     <h4>2. paste the link </h4>
-    <h4>3. click on submit button </h4>
+    <h4>3. click on Go button </h4>
     <h4>3. select you video resolution</h4>
     <h4>4. click the download button</h4>
 </div>

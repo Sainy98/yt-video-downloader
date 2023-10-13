@@ -11,7 +11,15 @@
 
     </select>
 
-    <button type="submit">Download</button>
-
+    <button type="submit" onclick="submit()">Download</button>
+    <div id="wal" style="display: none;">
+        <img src="/static/css/1474.gif" alt="" srcset=""> <br>
+        <span>Wait, your video is downloading........</span>
+    </div>
+    <script>
+        function submit() {
+            document.getElementById("wal").style.display = 'block';
+        }
+    </script>
 </form>
 {%endblock content%}

@@ -1,5 +1,27 @@
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Apply the animation to the title */
+h1 {
+    overflow: hidden;
+    /* Hide overflow text */
+    border-right: .15em solid orange;
+    /* Add a blinking cursor */
+    white-space: nowrap;
+    /* Make text appear in one line */
+    animation: typewriter 2s steps(30) 10s infinite alternate;
+    /* Adjust animation duration and steps */
+}
+
 body {
-    background-color: #121014;
+    background-color: black;
     font-family: monospace;
     color: yellow;
     border: 2px solid;
@@ -7,11 +29,15 @@ body {
 }
 
 h1 {
-    font-size: 47px;
+    font-size: 205%;
     background: tomato;
     text-align: center;
     font-family: monospace;
     color: seashell;
+}
+
+span {
+    color: red;
 }
 
 h3 {
@@ -19,7 +45,7 @@ h3 {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 8%;
-    font-size: xx-large;
+    font-family: system-ui;
 }
 
 .itag {
@@ -48,23 +74,24 @@ button {
 }
 
 .submit {
-    width: 15%;
+    width: 24%;
     height: 63px;
     border-radius: 13px;
     font-size: 20px;
     background-color: #1ad21a;
     cursor: pointer;
+    margin-top: 11px;
 }
 
 footer {
-    background-color: #fffff2;
+    background-color: transparent;
     margin-top: 135%;
 }
 
 div {
-    font-size: 20px;
-    color: rgb(231, 184, 231);
-    font-weight: bolder;
+    font-size: 14px;
+    color: white;
+    font-family: system-ui;
 }
 
 .uses {
@@ -73,23 +100,9 @@ div {
     margin: 35% 4% 0% 10%;
 }
 
-#spin {
-    margin-left: 7%;
-    position: absolute;
-    margin-top: 4%;
-    width: 58px;
-    display: none;
-}
 
-#pull {
 
-    margin-top: 17%;
-    margin-left: -18%;
-    width: 20%;
-    display: none;
-    position: absolute;
 
-}
 
 #im {
     width: 90%;
@@ -106,4 +119,8 @@ nav {
     display: flex;
     background-color: tomato;
     flex-direction: column-reverse;
+}
+
+#walk {
+    display: none;
 }

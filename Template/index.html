@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/css/youtube.png">
     <title>Youtube Video Downloader</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -13,23 +14,12 @@
 
     <main role="main">
         <nav>
-            <a href="/index.html">
-                <h2>HOME</h2>
-            </a>
             <h1>Youtube Video Downloader</h1>
         </nav>
-        <img src="/static/css/icons8-pullups.gif" alt="" width="100px" id="pull">
         {%block content%}{%endblock%}
     </main>
 
 </body>
-
-<script>
-    function downloading() {
-        document.getElementById("spin").value = "inline-block";
-        document.getElementById("pull").style.display = "inline-block";
-    }
-</script>
 
 <footer>
     <div>

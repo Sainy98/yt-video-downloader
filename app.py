@@ -8,6 +8,7 @@ app.config['SECRET_KEY'] = "sainy"
 
 port = int(os.environ.get("PORT", 5000))
 
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("home.html")
@@ -46,4 +47,4 @@ def downloaded():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=True)

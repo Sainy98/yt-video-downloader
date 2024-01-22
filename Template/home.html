@@ -1,20 +1,40 @@
 {%extends 'index.html'%}
 {%block content%}
 <h3>{{TITLE}}</h3>
-
-<form action="/download" method="POST">
-    <input type="url" name="url" class="url" placeholder="Enter Your Link">
-    <input id="btn" type="submit" class="submit" value="Go" onclick="downloading()">
+<form action="/download" method="POST" onsubmit="return validateUrl()">
+    <input type="url" name="url" id="urlInput" class="url" placeholder="Enter Your Link" oninput="toggleButton()">
+    <input id="btn" type="submit" class="submit" value="Go" disabled>
 </form>
-<div id="walk">
+<div id="walk" style="display: none;">
     <img src="/static/css/1474.gif" alt="" srcset=""><br>
-    <span>video is preparing........</span>
+    <span>Video is Preparing...</span>
 </div>
 <script>
-    function downloading() {
-        document.getElementById("walk").style.display = 'block';
+    function toggleButton() {
+        var urlInput = document.getElementById('urlInput');
+        var btn = document.getElementById('btn');
+        btn.disabled = !urlInput.value.trim();
+    }
+
+    function validateUrl() {
+        var urlInput = document.getElementById('urlInput');
+        var walkDiv = document.getElementById('walk');
+
+        // Validate the URL using the URL constructor
+        try {
+            var url = new URL(urlInput.value);
+            // If the URL is valid, display the "walk" image and return true to submit the form
+            walkDiv.style.display = 'block';
+            return true;
+        } catch (error) {
+            // If the URL is invalid, hide the "walk" image and return false to prevent form submission
+            walkDiv.style.display = 'none';
+            alert('Invalid URL. Please enter a valid URL.');
+            return false;
+        }
     }
 </script>
+
 
 <div class="uses">
     <h2>HOW TO USE?</h2>

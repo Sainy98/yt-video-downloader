@@ -1,9 +1,13 @@
 body {
     background-color: black;
-    font-family: monospace;
+    font-family: sans-serif;
     color: yellow;
     border: 2px solid;
     text-align: -webkit-center;
+}
+
+main {
+    height: 115vh;
 }
 
 @keyframes typewriter {
@@ -24,14 +28,14 @@ h1 {
     /* Add a blinking cursor */
     white-space: nowrap;
     /* Make text appear in one line */
-    animation: typewriter 2s steps(30) 10s infinite alternate;
+    animation: typewriter 4s steps(30) infinite;
     /* Adjust animation duration and steps */
 }
 
 
 h1 {
     font-size: 205%;
-    background: tomato;
+    background: #a30451;
     text-align: center;
     font-family: monospace;
     color: seashell;
@@ -86,7 +90,16 @@ button {
 
 footer {
     background-color: transparent;
-    margin-top: 135%;
+}
+
+footer div {
+    width: 80%;
+    height: auto;
+}
+
+footer div>img {
+    width: inherit;
+    height: inherit;
 }
 
 div {
@@ -98,12 +111,27 @@ div {
 .uses {
     text-align: left;
     display: inline-table;
-    margin: 35% 4% 0% 10%;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 4em;
 }
 
+@media only screen and (max-width: 600px) {
+    .uses {
+        text-align: left;
+        display: inline-table;
+        font-family: sans-serif;
+        font-size: 15px;
+        margin-left: 2em;
+
+    }
 
 
+}
 
+form {
+    padding: 1em 0;
+}
 
 #im {
     width: 90%;
@@ -118,12 +146,14 @@ button:hover {
 
 nav {
     display: flex;
-    background-color: tomato;
+    background-color: #a30451;
+    ;
     flex-direction: column-reverse;
 }
 
 #walk {
     display: none;
+    margin: 2em 0;
 
 }
 

@@ -10,6 +10,8 @@ main {
     height: 115vh;
 }
 
+@media only screen and (max-width: 600px) {}
+
 @keyframes typewriter {
     from {
         width: 0;
@@ -90,7 +92,7 @@ button {
 
 footer {
     background-color: transparent;
-    margin-top: 14em;
+    margin-top: 44em;
 }
 
 footer div {
@@ -107,7 +109,7 @@ footer div>img {
 
     footer {
         background-color: transparent;
-        margin-top: -7em;
+        margin-top: -5em;
     }
 
 }
